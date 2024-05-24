@@ -1,15 +1,17 @@
 terraform {
   required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.46.0"
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "3.104.2"
     }
   }
 }
 
-provider "aws" {}
+provider "azurerm" {
+  freatures {}
+}
 
-resource "aws_instance" "server1" {
-  ami                     = "ami-04e5276ebb8451442"
-  instance_type           = "t2.micro"
+resource "azurerm_resource_group" "demorm" {
+   name= "demoRG123"
+   location="East US"
   }
