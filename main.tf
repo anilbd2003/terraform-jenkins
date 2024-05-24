@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "azurerm" {
-  freatures {}
+  features {}
 }
 
 resource "azurerm_resource_group" "demorm" {
